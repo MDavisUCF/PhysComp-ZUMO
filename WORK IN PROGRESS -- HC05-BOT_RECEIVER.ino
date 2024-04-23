@@ -3,21 +3,23 @@
 // HC-05 BLUETOOTH MODULE /////////////////////
 // Madeline Davis, UCF - Physcial Computing ///
 ///////////////////////////////////////////////
-// Last update April 23 //
-
-/// YOU DO NOT NEED TO UPLOAD OR EDIT THIS CODE!!! IT IS ALREADY PRELOADED ON THE BOT!!///
 
 #include <SoftwareSerial.h>
 #include <ZumoMotors.h> // Include the Zumo Motors library
 #include <ZumoBuzzer.h> // Include Zumo Buzzer Library
 
 
-SoftwareSerial mySerial(12, 11); // RX, TX
+
+SoftwareSerial mySerial(11, 12); // RX, TX
 
 ZumoMotors motors; 
 
 ZumoBuzzer buzzer;
 const char charge[] PROGMEM = "O4 T100 V15 L4 MS g12>c12>e12>G6>E12 ML>G2";
+
+#define REVERSE_SPEED     400 // 0 is stopped, 400 is full speed
+#define TURN_SPEED        400
+#define FORWARD_SPEED     400 // 200 original
 
 void setup() {
   Serial.begin(9600); // Begin serial communication with the computer
@@ -32,16 +34,16 @@ void loop() {
     // MAIN MOVEMENTS FBLR
     switch(command) {
       case 'F':
-        motors.setSpeeds(400, 400); // Move Forward
+        motors.setSpeeds(400, 400); 
         break;
       case 'B':
-        motors.setSpeeds(-400, -400); // Move Backward
+        motors.setSpeeds(-200, -200); // Move Backward
         break;
       case 'L':
-        motors.setSpeeds(-250, 250); // Turn Left
+        motors.setSpeeds(-200, 200); // Turn Left
         break;
       case 'R':
-        motors.setSpeeds(250, -250); // Turn Right
+        motors.setSpeeds(200, -200); // Turn Right
         break;
 /// Additional Inputs
       case 'A': 
@@ -49,10 +51,6 @@ void loop() {
         break;
       case 'C': // Plays the CHARGE! sound effect
         buzzer.playFromProgramSpace(charge);
-        break;
-/// Baseline
-      default:
-        motors.setSpeeds(0, 0); // Stop if no valid command is detected
         break;
     }
   } else {
