@@ -5,6 +5,8 @@
 ///////////////////////////////////////////////
 // Last update April 23 //
 
+/// YOU DO NOT NEED TO UPLOAD OR EDIT THIS CODE!!! IT IS ALREADY PRELOADED ON THE BOT!!///
+
 #include <SoftwareSerial.h>
 #include <ZumoMotors.h> // Include the Zumo Motors library
 #include <ZumoBuzzer.h> // Include Zumo Buzzer Library
