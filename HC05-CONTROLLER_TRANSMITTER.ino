@@ -8,7 +8,7 @@
 
 #include <SoftwareSerial.h>
 
-SoftwareSerial mySerial(3, 2); // The bluetooth module connects to these pins on your Arduino
+SoftwareSerial mySerial(3, 2); // The bluetooth module connects to these pins on your Arduino (TX, RX)
 
 /// The following is a simple example of button inputs. Here is where you would include your own.
 int Button1 = 4; // Example button input (1)
