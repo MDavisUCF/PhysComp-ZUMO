@@ -2,25 +2,5 @@ Extra Inputs Menu!
 /// Have extra inputs on your controller? No problem! 
 // Want extra inputs on your controller? Go for it!
 
-"A" = 
 "C" = Charge! sound effect: https://drive.google.com/file/d/1CQqZdL5sEWN39paccXtfD7kknb_2zcOd/view?usp=drive_link
-"D"
-"E"
-"G"
-"H"
-"I"
-"J"
-"K"
-"M"
-"N"
-"O"
-"P"
-"Q"
-"S"
-"T"
-"U"
-"V"
-"W"
-"X"
-"Y"
-"Z"
+"S" = STOP. All Motors set 0,0 Speed
