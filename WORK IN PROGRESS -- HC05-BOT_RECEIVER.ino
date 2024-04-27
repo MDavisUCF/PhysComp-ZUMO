@@ -46,8 +46,8 @@ void loop() {
         motors.setSpeeds(200, -200); // Turn Right
         break;
 /// Additional Inputs
-      case 'A': 
-        ///
+      case 'S': 
+        motors.setSpeeds(0, 0);
         break;
       case 'C': // Plays the CHARGE! sound effect
         buzzer.playFromProgramSpace(charge);
