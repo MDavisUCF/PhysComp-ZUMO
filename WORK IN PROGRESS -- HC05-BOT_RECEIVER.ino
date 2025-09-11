@@ -15,7 +15,16 @@ SoftwareSerial mySerial(11, 12); // RX, TX
 ZumoMotors motors; 
 
 ZumoBuzzer buzzer;
-const char charge[] PROGMEM = "O4 T100 V15 L4 MS g12>c12>e12>G6>E12 ML>G2";
+const char charge[] PROGMEM = "v12 L16 o4 cfa>cra>c4";
+const char tetris[] PROGMEM = "!T240 L8 MS >e<eb>c>d>e16>d16>cba<aa>c>e<a>d>cb<g+b>c>d<e>e<e>c<aarae<bc d>d<d>f>ad16d16>g>f>e<cr>c>e<g>d>cb<g+b>c>d<e>e<e>c<aa<aa";
+const char mario[] PROGMEM = 	"v12 L16 o5 eererce8g8r8<g8r8"
+	"c8.<gr8<e8.<a8<b8<b-<a8<g.e.g.a8fgre8cd<b8."
+	"c8.<gr8<e8.<a8<b8<b-<a8<g.e.g.a8fgre8cd<b8."
+	"r8gf#fd#8er<g#<acr<acd"
+	"r8gf#fd#8er>c8>c>c4"
+	"r8gf#fd#8er<g#<acr<acd"
+	"r8e-8rd8.c4";
+const char oops[] PROGMEM = "v12 L16 o4 frc32<b32c32c#8cr8.erf";
 
 #define REVERSE_SPEED     400 // 0 is stopped, 400 is full speed
 #define TURN_SPEED        400
@@ -51,6 +60,15 @@ void loop() {
         break;
       case 'C': // Plays the CHARGE! sound effect
         buzzer.playFromProgramSpace(charge);
+        break;
+      case 'T': // Plays the Tetris sound effect
+        buzzer.playFromProgramSpace(tetris);
+        break;
+      case 'M': // Plays the Tetris sound effect
+        buzzer.playFromProgramSpace(mario);
+        break;
+      case 'O': // Plays the Tetris sound effect
+        buzzer.playFromProgramSpace(oops);
         break;
     }
   } else {
