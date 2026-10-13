@@ -8,3 +8,5 @@ This menu will be on the Zumo, so all you will need to do is send the letter of 
 
 Your controller will need to have a space to connect to the Bluetooth Module either via jumper wires (female) or breadboard. 
 You will need: 5v - GND - Digital Pin 3 - Digital Pin 2
+
+Before testing with the bots, comment out any println for the Arduino IDE Serial Monitor!!!
