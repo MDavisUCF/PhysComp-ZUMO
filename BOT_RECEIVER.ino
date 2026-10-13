@@ -54,20 +54,20 @@ void loop() {
       case 'R':
         motors.setSpeeds(200, -200); // Turn Right
         break;
-/// Additional Inputs
       case 'S': 
         motors.setSpeeds(0, 0);
         break;
+/// Additional Inputs
       case 'C': // Plays the CHARGE! sound effect
         buzzer.playFromProgramSpace(charge);
         break;
       case 'T': // Plays the Tetris sound effect
         buzzer.playFromProgramSpace(tetris);
         break;
-      case 'M': // Plays the Tetris sound effect
+      case 'M': // Plays the Mario sound effect
         buzzer.playFromProgramSpace(mario);
         break;
-      case 'O': // Plays the Tetris sound effect
+      case 'O': // Plays the Oops sound effect
         buzzer.playFromProgramSpace(oops);
         break;
     }
