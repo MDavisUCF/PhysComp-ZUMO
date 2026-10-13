@@ -71,8 +71,9 @@ void loop() {
         buzzer.playFromProgramSpace(oops);
         break;
     }
-  } else {
+  } 
+  //else {
     // If no data is available, stop the motors
-    motors.setSpeeds(0, 0);
-  }
+   // motors.setSpeeds(0, 0);
+  //}
 }
